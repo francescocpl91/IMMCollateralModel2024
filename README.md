@@ -16,7 +16,10 @@ B) Static txt data: Intrument cubes to be taken using: $MAG_HOME/util/showCube -
                     code needs to read. if for example you are analysing two master agreements and each one has a CSA below, 
                     you will need to create 1) "MA1" folder and within it "CSA1" and within this last one save the txt instrument and settlement flows there. 2) 
                     "MA2" folder and within it "CSA2" and within this last one save the txt instrument and settlement flows there)
+
+    
 HOW TO RUN THE LIBRARY:
+
 1) The whole library is triggered by Exec.py. Within it, WORKPARTH variable has to be updated with your local directory path of "IMM Collateral Model"
 2) If you want to run the model with Physical_Collateral se the variable at the beggining of Exec.py to True. If not then False.
 3) In variable l_MA at th beggining of Exec.py you need to specify the Master Agreements you want to analise. Obviously they need to be aligned with your "inputs" set-up.
