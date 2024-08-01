@@ -6,11 +6,12 @@ SET-UP INSTRUCTIONS:
 2)  In the "Inputs" folder you need to add the following (example available in https://ssctechnologiesinc.sharepoint.com/:f:/r/sites/Algo/Shared%20Documents/Client%20Success/Client%20Projects/EMEA/BBVA/PythonIMMCollateralModel?csf=1&web=1&e=J1tj03):
 A)  Static csv data has to be taken from  /unload/au/xkoz/es/dat/in/IMCRData/XXXX/input_data/aidb_data, /unload/au/xkoz/es/dat/in/IMCRData/XXXX/aux_files/XKOZ_udsloader_node_mitigants.CSV  (only if Physical     
    collateral run is needed) and  /unload/au/xkoz/es/dat/in/IMCRData/XXXX/rtce/replace/counterparties/.
-   (BE CAREFUL WITH CollateralAllocationSNS.csv - The is only for SNS cases and the information has to be taken from SNS Excel SACCR file after being populated: Allocation factor and IMM VM after applying     
+   (BE CAREFUL WITH CollateralAllocationSNS.csv - The is only for SNS cases and the information has to be taken from SNS Excel SACCR file after being populated: 
+    Allocation factor and IMM VM after applying     
    allocation factor).
-B) Static txt data: Intrument cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -n "ZZZZ" -pc 16 -t Instrument
-                    TFs cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -n "ZZZZ" -pc 16 -t SettlementFlow
-                    CCY Cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -pc 16 -t Currency
+B) Static txt data: Instrument cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -n "ZZZZ" -pc 16 -t Instrument,
+                    TFs cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -n "ZZZZ" -pc 16 -t SettlementFlow,
+                    CCY Cubes to be taken using: $MAG_HOME/util/showCube -c $XKOZ_DATOUT/cubes/XXXX/cubesMerged/YYYY.h5c -pc 16 -t Currency,
                     (PLEASE CHECK THE LINK ABOVE IN ORDER TO KNOW WHERE TO SAVE THE TXT FILES - general rule is that CCY cubes are saved together with the csv 
                     files while for each MA ->CSA or NC node you need to save separately the input data. You have to create all the folders of the nodes that the 
                     code needs to read. if for example you are analysing two master agreements and each one has a CSA below, 
